@@ -1,5 +1,59 @@
-body {
-
-	background-image: url(../game.jpg);
-
+body{
+	background: url("../images/starwars.jpg") ;
 }
+
+/* #titles
+{
+	position: absolute;
+	width: 18em;
+	height: 50em;
+	bottom: 0;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 350%;
+	font-weight: bold;
+	text-align: justify;
+	overflow: hidden;
+	transform-origin: 50% 100%;
+	transform: perspective(300px) rotateX(25deg);
+}
+#titles:after
+{
+	position: absolute;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 60%;
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	pointer-events: none;
+}
+#titlecontent
+{
+	position: absolute;
+	top: 100%;
+	@-webkit-animation: scroll 100s linear 4s infinite;
+}
+
+@-webkit-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+#display {
+	font-family: "Times New Roman", Times, serif, "Comic Sans MS";
+}
+
+/*fix this area when you go back to style page!
+*/
+.gameArea {
+	color: white;
+	padding: 100px;
+
+}  
+span {
+	color: black;
+	text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
+	font-weight: bold;
+}
+

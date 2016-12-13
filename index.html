@@ -1,47 +1,60 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<html>
+<html lang="en">
 <head>
-	<title>The Psychic Game</title>
-	<link rel="stylesheet" type="test/css" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+<meta charset="utf-8">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <title>The Pyschic Game</title>
 </head>
 <body>
+          <!--Template of the Game-->
+          <!--<div id = "titles"> 
 
-<!--Container for what will be viewed on page-->
-
-	<div class="container">
-
-		<header class="header">
-
-			<h1>The Psychic Game</h1>
-			<h4 id="status">Guess what letter I am thinking of (a-z)!</h4>
-
-		</header>
-
-		<section>
-
-		<!--Wins to Losses-->
-
-			<div class="win"><h3>Wins : <span id="Wins">0</span></h3></div>
-
-			<div class="loss"><h3>Losses : <span id="Losses">0</span></h3></div>
-
-		</section>
-
-		<!-- number of guesses thus far and the what the player has guessed-->
-
-		<section class="content">
-
-			<div><h3>Guesses Left: <span id="guess"></span></h3></div>
-
-			<div><h3>Your guesses so far: <span id="guess"></span></h3></div>
-			
-		</section>
+          Instructions 
+              <section>
 
 
+            <div id"titlecontent">
+              <p>You will guess what letter Master Yoda is thinking of. You have the range of the alphabet. In other words,
+              you can choose a letter between a - z. Obviously the odds are not very good. 1 in 26, really. However, if you require
+              assistance, Master Yoda will help you. All you have to do is ask!</p>
+              <p>GOOD LUCK!</p>
+              <p>And, MAY THE FORCE BE WITH YOU!</p>
+
+            </div>
+
+            </section>
+            
+            </div>-->
+
+
+          <div class="gameArea">
+              <div id = "display">
+                <h1>The <span>STAR WARS</span> Psychic Game with Yoda!</h1>
+                <h2>What Letter Thinking Of, Am I? <input id="input" size=1px type="text" placeholder=""></h2>
+                <!--<input type="button" id="guess" value="Guesses"/>-->
+                </div>
+                <section>
+                <div id="output"><h2>Guess a letter of the alphabet, you will. Assist you, if I must!</h2></div>
+                </section>
+          <!--Wins to Losses-->
+
+              <div class = "stats">
+                <p id="Wins" >Wins:</p>
+                <p id="Losses">Losses:</p>
+              </div>
+
+          <!--Number of guesses and remaining guesses created with ids and classes to reference in CSS and JS stylesheets-->
+
+              <div class = "guesses">
+                <p id="GL">Guesses Left:</p>
+                <p id="YG">Your Guesses So Far:</p>
+              </div> 
+          </div>     
 
 
 
+<script src="assets/javascript/game.js"></script>
 </body>
 </html>
