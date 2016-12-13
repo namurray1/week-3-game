@@ -2,50 +2,59 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<!-- Latest compiled and minified CSS -->
+		<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   <title>The Pyschic Game</title>
 </head>
 <body>
-          <!--Template of the Game-->
-          <!--<div id = "titles"> 
+          	<!--Template of the Game-->
+          <div id = "titles"> 
 
           Instructions 
               <section>
 
+			<!--Scrolling STAR WARS title-->
 
-            <div id"titlecontent">
-              <p>You will guess what letter Master Yoda is thinking of. You have the range of the alphabet. In other words,
-              you can choose a letter between a - z. Obviously the odds are not very good. 1 in 26, really. However, if you require
-              assistance, Master Yoda will help you. All you have to do is ask!</p>
-              <p>GOOD LUCK!</p>
-              <p>And, MAY THE FORCE BE WITH YOU!</p>
+            <div id= "titlecontent">
+
+	             <p>YOU WILL GUESS WHAT LETTER MASTER YODA IS THINKING OF. YOU HAVE THE RANGE OF THE ALPHABET. IN OTHER WORDS,
+	              YOU CAN CHOOSE A LETTER BETWEEN A - Z. OBVIOUSLY, THE ODDS ARE NOT VERY GOOD. 1 IN 26, REALLY. HOWEVER, IF YOU REQUIRE
+	              ASSISTANCE, MASTER YODA WILL HELP YOU. ALL YOU HAVE TO DO IS ASK!</p>
+				<p>BY THE WAY, ISN'T THIS COOL? I FOUND THIS SCROLLING STAR WARS THEME WHILE COMPLETING THIS PROJECT. I FIGURED IT WOULD GO WELL WITH THE THEME.</p>
+				<p>YEAH, IT NEEDS A LITTLE WORK, BUT IT AIN'T BAD!</p>
+				<p>LET ME KNOW WHAT YOU THINK!</p>
+              	<p>GOOD LUCK AND HAVE FUN!!</p>
+              	<p>AND, MAY THE FORCE BE WITH YOU!</p>
 
             </div>
 
             </section>
             
-            </div>-->
+            </div>
 
+			<!--HTML game area-->
 
           <div class="gameArea">
               <div id = "display">
-                <h1>The <span>STAR WARS</span> Psychic Game with Yoda!</h1>
-                <h2>What Letter Thinking Of, Am I? <input id="input" size=1px type="text" placeholder=""></h2>
+                <h1><span>THE PSYCHIC GAME WITH MASTER YODA</span></h1>
+                <h2>What Letter Thinking Of, Am I? <input id="input" size= 1px type="text" placeholder=""></h2>
+
                 <!--<input type="button" id="guess" value="Guesses"/>-->
+
                 </div>
                 <section>
                 <div id="output"><h2>Guess a letter of the alphabet, you will. Assist you, if I must!</h2></div>
                 </section>
-          <!--Wins to Losses-->
+
+          		<!--Wins to Losses-->
 
               <div class = "stats">
                 <p id="Wins" >Wins:</p>
                 <p id="Losses">Losses:</p>
               </div>
 
-          <!--Number of guesses and remaining guesses created with ids and classes to reference in CSS and JS stylesheets-->
+          		<!--Number of guesses and remaining guesses created with ids and classes to reference in CSS and JS stylesheets-->
 
               <div class = "guesses">
                 <p id="GL">Guesses Left:</p>
@@ -55,6 +64,6 @@
 
 
 
-<script src="assets/javascript/game.js"></script>
+		<script src="assets/javascript/game.js"></script>
 </body>
 </html>
