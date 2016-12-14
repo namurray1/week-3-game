@@ -1,59 +1,44 @@
 //jslint browser: true, passfail: false, white: true 
 
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; //is the array for the letters
-
 var randomLetter = Math.floor(Math.random() * letters.length - 1);
-
-var numberGuesses = 0; //holds the number of guesses made by the player
-
-var letterToGuess = letters[randomLetter]; // holds the random letter to be guessed
-
+var computersPick = letters[randomLetter]; // holds the random letter to be guessed
+var wins = 0;
+var losses = 0;
+var guessRemaining = 10;
+var guesses = [];
+var gameOver = false;
 //var higherOrLower = " "; // holds the text for higher or lower relative to the user's guess
 
 //var lettersGuessed =" "; // holds the current set of letters the player has guessed up to 10
+function resetGame () {
 
-var computersPick = [letterToGuess.length];
+  computersPick=letters[randomLetter]; 
+  guessRemaining = 10; 
+  guesses = [];
 
-var gameOver = false; //set to false until the player wins game 
-      document.onkeyup = function(event) {
-      guessesLeft--;
-      var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-
-for(var i = 0; i < letterToGuess.length; i++) {
-
-  computersPick[i]="_";
 }
-
-for (var i = 0; i < computersPick.length; i++)
-
-{
-
-  var userGuess = document.getElementById("YG");
-  var newLetter = document.createTextNode(computersPick[i]);
-  userGuess.appendChild(newLetter);
-}
-
-  document.onkeyup = function(event) 
-
-  {
-
-  var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-
-  console.log(letter);
-
-  for(var i=0; i < computersPick; i++)
-
-  {
-
-    if(letterToGuess === computersPick[i])
-    {
-
-      computersPick
-    }
-
-
+document.onkeyup = function(event) {
+      
+var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+if(guessRemaining > 0) {
+  if(userGuess === computersPick){
+    wins++;
+    document.getElementById("Wins").innerHTML = "Wins: " + wins;
+    resetGame()
+  } else if (userGuess !== computersPick){
+    guessRemaining--;
+    document.getElementById("GL").innerHTML = "Guesses Left: " + guessRemaining;
+    guesses.push(userGuess)
+    document.getElementById("YG").innerHTML = "Your Guesses so Far: " + guesses;
   }
+} else {
+  losses++;
+  document.getElementById("Losses").innerHTML = "Losses: " + losses;
+  resetGame()
+}
 
+  
 };
 
 
